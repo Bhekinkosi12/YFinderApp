@@ -7,7 +7,12 @@ namespace YFinder
 {
 	public partial class LoginPage : ContentPage
 	{
-		void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
+        async void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new FavoritePage());
+        }
+
+        void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
 		{
 			label.Text = e.NewTextValue;
 		}
