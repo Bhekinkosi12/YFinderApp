@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace YFinder
 {
-	public class Post
+	public class User
 	{
 		public int userId { get; set; }
 		public object bio { get; set; }
@@ -23,7 +23,7 @@ namespace YFinder
 	{
 		private const string Url = "http://localhost:5000/api/user";
 		private HttpClient _client = new HttpClient();
-		private ObservableCollection<Post> _posts;
+		private ObservableCollection<User> _posts;
 
         public UserPage()
 		{
@@ -34,9 +34,9 @@ namespace YFinder
 		{
 
 			var content = await _client.GetStringAsync(Url);
-			var posts = JsonConvert.DeserializeObject<List<Post>>(content);
+			var posts = JsonConvert.DeserializeObject<List<User>>(content);
 
-			_posts = new ObservableCollection<Post>(posts);
+			_posts = new ObservableCollection<User>(posts);
 			postsListView.ItemsSource = _posts;
 
 			base.OnAppearing();
@@ -44,7 +44,7 @@ namespace YFinder
 
 		async void OnAdd(object sender, System.EventArgs e)
 		{
-            var post = new Post { userName = "UserTest " + DateTime.Now.Ticks };
+            var post = new User { userName = "UserTest " + DateTime.Now.Ticks };
 
 			var content = JsonConvert.SerializeObject(post);
 			await _client.PostAsync(Url, new StringContent(content));
