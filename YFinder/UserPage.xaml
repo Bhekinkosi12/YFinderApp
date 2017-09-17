@@ -6,10 +6,10 @@
             <Button Text="Update" Clicked="OnUpdate" HorizontalOptions="CenterAndExpand" />
             <Button Text="Delete" Clicked="OnDelete" />
         </StackLayout>
-        <ListView x:Name="postsListView">
+        <ListView x:Name="usersListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding userName}" />
+                    <TextCell Text="{Binding userName}" Detail="{Binding email}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
