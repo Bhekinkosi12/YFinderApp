@@ -8,7 +8,6 @@ using YFinder.Models;
 
 namespace YFinder
 {
-
 	public partial class UserPage : ContentPage
 	{
 		private const string Url = "http://localhost:5000/api/user";
@@ -22,7 +21,6 @@ namespace YFinder
 
 		protected override async void OnAppearing()
 		{
-
 			var content = await _client.GetStringAsync(Url);
 			var users = JsonConvert.DeserializeObject<List<User>>(content);
 
@@ -34,12 +32,21 @@ namespace YFinder
 
 		async void OnAdd(object sender, System.EventArgs e)
 		{
-            var user = new User { userName = "UserTest " + DateTime.Now.Ticks };
+            var user = new User 
+            {
+                bio = "coolest example ever",
+                email = "xample@example.com",
+                fullName = "Xavier Ample",
+                host = 0,userName = "Xample",
+                zip = 37208,
+                favorite = null
+            };
 
-			var content = JsonConvert.SerializeObject(user);
-			await _client.PostAsync(Url, new StringContent(content));
+            var content = JsonConvert.SerializeObject(user);
+            await _client.PostAsync(Url, new StringContent(content));
 
-			_users.Insert(0, user);
+            OnAppearing();
+
 		}
 
 		async void OnUpdate(object sender, System.EventArgs e)
@@ -48,7 +55,7 @@ namespace YFinder
             user.userName += " UPDATED";
 
 			var content = JsonConvert.SerializeObject(user);
-            await _client.PutAsync(Url + "/" + user.userId, new StringContent(content));
+            await _client.PutAsync(Url, new StringContent(content));
 		}
 
 		async void OnDelete(object sender, System.EventArgs e)
