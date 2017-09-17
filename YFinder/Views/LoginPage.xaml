@@ -4,5 +4,6 @@
         <Entry Keyboard="Text" Placeholder="Username"/>
         <Entry IsPassword="true" TextChanged="Handle_TextChanged"/>
         <Label x:Name="label" />
+        <Button Text="ViewAllUsers" Clicked="Handle_Clicked" />
     </StackLayout>
 </ContentPage>
