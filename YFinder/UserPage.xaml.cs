@@ -49,7 +49,6 @@ namespace YFinder
             var content = JsonConvert.SerializeObject(user);
 			await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8,"application/json"));
             OnAppearing();
-
 		}
 
 		async void OnUpdate(object sender, System.EventArgs e)

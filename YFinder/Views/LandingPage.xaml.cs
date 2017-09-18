@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using YFinder.Views;
 
 namespace YFinder
 {
@@ -12,9 +13,15 @@ namespace YFinder
             InitializeComponent();
         }
 
-		async void Handle_Clicked(object sender, System.EventArgs e)
+        async void RouteToLoginPage(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LoginPage());
+        }
+
+		async void RouteToRegisterPage(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new LoginPage());
+			await Navigation.PushModalAsync(new RegisterPage());
 		}
     }
 }
+
