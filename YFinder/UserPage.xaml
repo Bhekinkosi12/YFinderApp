@@ -11,9 +11,9 @@
                 <DataTemplate>
                     <TextCell Text="{Binding userName}" Detail="{Binding email}">
                       <TextCell.ContextActions>
-                            <MenuItem Text="Call" Clicked="OnUpdate" CommandParameter="{Binding .}"/>
-                            <MenuItem Text="Delete" Clicked="OnDelete" IsDestructive="true" CommandParameter="{Binding .}"/>
-                        </TextCell.ContextActions>
+                        <MenuItem Text="Update" Clicked="OnUpdate" CommandParameter="{Binding .}"/>
+                        <MenuItem Text="Delete" Clicked="OnDelete" IsDestructive="true" CommandParameter="{Binding .}"/>
+                      </TextCell.ContextActions>
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

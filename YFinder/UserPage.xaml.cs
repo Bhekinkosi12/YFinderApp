@@ -48,25 +48,23 @@ namespace YFinder
 
             var content = JsonConvert.SerializeObject(user);
 			await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8,"application/json"));
-
             OnAppearing();
 
 		}
 
 		async void OnUpdate(object sender, System.EventArgs e)
 		{
-			var user = _users[0];
+			var user = (sender as MenuItem).CommandParameter as User;
             user.userName += " UPDATED";
-
 			var content = JsonConvert.SerializeObject(user);
-			await _client.PutAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+			await _client.PutAsync(Url + "/" + user.userId, new StringContent(content, Encoding.UTF8, "application/json"));
+            OnAppearing();
 		}
 
 		async void OnDelete(object sender, System.EventArgs e)
 		{
 			var user = (sender as MenuItem).CommandParameter as User;
             await _client.DeleteAsync(Url + "/" + user.userId);
-
             _users.Remove(user);
 		}
 
