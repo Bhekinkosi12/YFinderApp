@@ -12,6 +12,7 @@ namespace YFinder
 {
 	public partial class UserPage : ContentPage
 	{
+
         private const string Url = "http://localhost:5000/api/user";
 		private HttpClient _client = new HttpClient();
 		private ObservableCollection<User> _users;
@@ -58,16 +59,16 @@ namespace YFinder
             user.userName += " UPDATED";
 
 			var content = JsonConvert.SerializeObject(user);
-            await _client.PutAsync(Url, new StringContent(content));
+			await _client.PutAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
 		}
 
 		async void OnDelete(object sender, System.EventArgs e)
 		{
-			var user = _users[0];
-
+			var user = (sender as MenuItem).CommandParameter as User;
             await _client.DeleteAsync(Url + "/" + user.userId);
 
-			_users.Remove(user);
+            _users.Remove(user);
 		}
+
 	}
 }
