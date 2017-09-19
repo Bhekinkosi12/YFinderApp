@@ -15,5 +15,10 @@ namespace YFinder.Models
 		public string zip { get; set; }
 		public object favorite { get; set; }
 		//public virtual ICollection<Favorite> Favorite { get; set ; }
+
+		public NewUser()
+		{
+			host = 0;
+		}
 	}
 }

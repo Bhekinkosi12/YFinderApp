@@ -18,20 +18,12 @@ namespace YFinder.Views
 		public RegisterPage()
 		{
 			InitializeComponent();
-		}
+		    BindingContext = new NewUser();
+        }
 
         async void OnAdd(object sender, System.EventArgs e)
         {
-            var user = new NewUser
-            {
-                bio = bio.Text,
-                email = email.Text,
-                fullName = fullName.Text,
-                host = 0,
-                userName = userName.Text,
-                zip = zip.Text,
-                favorite = null
-            };
+            var user = (NewUser)BindingContext;
 
             var content = JsonConvert.SerializeObject(user);
             await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
@@ -39,7 +31,7 @@ namespace YFinder.Views
             //var content2 = await _client.GetStringAsync(Url);
             //var users = JsonConvert.DeserializeObject<List<User>>(content2);
 
-            var page = new UserPage();   // temp
+            //var page = new UserPage();  
 
             //await Navigation.PushAsync(page);
         }

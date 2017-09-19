@@ -4,11 +4,11 @@
         <TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="New User">
-                    <EntryCell Label="Full Name" Placeholder="First Last" Keyboard="Text" x:Name="fullName"/>
-                    <EntryCell Label="Bio" Placeholder="Foodie who loves friends and family" Keyboard="Text" x:Name="bio"/>
-                    <EntryCell Label="Username" Placeholder="Xample123" x:Name="userName"/>
-                    <EntryCell Label="Email" Placeholder="xample@gmail.com" Keyboard="Email" x:Name="email"/>
-                    <EntryCell Label="Zip" Placeholder="37211" Keyboard="Text" x:Name="zip"/>
+                    <EntryCell Label="Full Name" Placeholder="First Last" Keyboard="Text" Text="{Binding fullName}"/>
+                    <EntryCell Label="Bio" Placeholder="Foodie who loves friends and family" Keyboard="Text" Text="{Binding bio}"/>
+                    <EntryCell Label="Username" Placeholder="Xample123" Text="{Binding userName}"/>
+                    <EntryCell Label="Email" Placeholder="xample@gmail.com" Keyboard="Email" Text="{Binding email}"/>
+                    <EntryCell Label="Zip" Placeholder="37211" Keyboard="Text" Text="{Binding zip}"/>
                 </TableSection>
             </TableRoot>
         </TableView>
