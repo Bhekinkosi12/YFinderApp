@@ -26,14 +26,14 @@ namespace YFinder.Views
             var user = (NewUser)BindingContext;
 
             var content = JsonConvert.SerializeObject(user);
-            await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+            HttpResponseMessage response = await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8, "application/json"));
+            response.EnsureSuccessStatusCode();
+            string responseBody = await response.Content.ReadAsStringAsync();
+            var newUser = JsonConvert.DeserializeObject<User>(responseBody);
 
-            //var content2 = await _client.GetStringAsync(Url);
-            //var users = JsonConvert.DeserializeObject<List<User>>(content2);
+            await Navigation.PushModalAsync(new UserProfilePage(newUser));
+            //await Navigation.PushModalAsync(new UserPage());
 
-            //var page = new UserPage();  
-
-            //await Navigation.PushAsync(page);
         }
 	}
 }
