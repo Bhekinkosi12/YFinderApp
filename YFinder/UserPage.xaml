@@ -3,13 +3,16 @@
     <StackLayout>
         <StackLayout Orientation="Horizontal">
             <Button Text="Add" Clicked="OnAdd" />
-            <Button Text="Update" Clicked="OnUpdate" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Delete" Clicked="OnDelete" />
         </StackLayout>
-        <ListView x:Name="postsListView">
+        <ListView x:Name="usersListView" VerticalOptions="Fill">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding userName}" />
+                    <TextCell Text="{Binding userName}" Detail="{Binding email}">
+                      <TextCell.ContextActions>
+                        <MenuItem Text="Update" Clicked="OnUpdate" CommandParameter="{Binding .}"/>
+                        <MenuItem Text="Delete" Clicked="OnDelete" IsDestructive="true" CommandParameter="{Binding .}"/>
+                      </TextCell.ContextActions>
+                    </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

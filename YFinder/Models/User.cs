@@ -7,25 +7,14 @@ namespace YFinder.Models
 {
   public class User
   {
-    public int UserId { get; set; }
-
-    public string Bio { get; set; }
-
-    public string Email { get; set; }
-
-    public string FullName { get; set; }
-
-    public int Host { get; set; } // int as bool
-
-    public string UserName { get; set; }
-
-    public int Zip { get; set; }
-
+    public int? userId { get; set; }
+    public object bio { get; set; }
+    public string email { get; set; }
+    public string fullName { get; set; }
+    public int host { get; set; }
+    public string userName { get; set; }
+    public string zip { get; set; }
+    public object favorite { get; set; }
     //public virtual ICollection<Favorite> Favorite { get; set ; }
-
-    public User() {
-      Host = 0;
-    }
-
   }
 }

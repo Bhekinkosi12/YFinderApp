@@ -1,0 +1,17 @@
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.Views.RegisterPage">
+    <StackLayout>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="New User">
+                    <EntryCell Label="Full Name" Placeholder="First Last" Keyboard="Text" Text="{Binding fullName}"/>
+                    <EntryCell Label="Bio" Placeholder="Foodie who loves friends and family" Keyboard="Text" Text="{Binding bio}"/>
+                    <EntryCell Label="Username" Placeholder="Xample123" Text="{Binding userName}"/>
+                    <EntryCell Label="Email" Placeholder="xample@gmail.com" Keyboard="Email" Text="{Binding email}"/>
+                    <EntryCell Label="Zip" Placeholder="37211" Keyboard="Text" Text="{Binding zip}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+       <Button Text="Register" Clicked="OnAdd" />
+   </StackLayout>
+</ContentPage>
