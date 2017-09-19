@@ -33,24 +33,6 @@ namespace YFinder
 			base.OnAppearing();
 		}
 
-		async void OnAdd(object sender, System.EventArgs e)
-		{
-            var user = new NewUser 
-            {
-                bio = "coolest example ever",
-                email = "xample@example.com",
-                fullName = "Xavier Ample3333",
-                host = 0,
-                userName = "Xample333",
-                zip = 37208,
-                favorite = null
-            };
-
-            var content = JsonConvert.SerializeObject(user);
-			await _client.PostAsync(Url, new StringContent(content, Encoding.UTF8,"application/json"));
-            OnAppearing();
-		}
-
 		async void OnUpdate(object sender, System.EventArgs e)
 		{
 			var user = (sender as MenuItem).CommandParameter as User;

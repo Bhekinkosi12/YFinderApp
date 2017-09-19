@@ -12,7 +12,7 @@ namespace YFinder.Models
 		public string fullName { get; set; }
 		public int host { get; set; }
 		public string userName { get; set; }
-		public int zip { get; set; }
+		public string zip { get; set; }
 		public object favorite { get; set; }
 		//public virtual ICollection<Favorite> Favorite { get; set ; }
 	}

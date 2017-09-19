@@ -12,7 +12,7 @@ namespace YFinder.Views
     public partial class RegisterPage : ContentPage
     {
 
-        private const string Url = "http://localhost:5000/api/user";
+        private string Url = StaticVariables.YFinderApiRootUrl + "/api/user";
         private HttpClient _client = new HttpClient();
 
 		public RegisterPage()
@@ -24,12 +24,12 @@ namespace YFinder.Views
         {
             var user = new NewUser
             {
-                bio = "coolest example ever",
-                email = "xample@example.com",
-                fullName = "Xavier Ample3333",
+                bio = bio.Text,
+                email = email.Text,
+                fullName = fullName.Text,
                 host = 0,
-                userName = "Xample333",
-                zip = 37208,
+                userName = userName.Text,
+                zip = zip.Text,
                 favorite = null
             };
 
