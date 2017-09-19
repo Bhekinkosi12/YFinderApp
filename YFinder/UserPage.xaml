@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserPage">
+<ContentPage Padding="0,20,0,0" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserPage">
     <StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Add" Clicked="OnAdd" />
         </StackLayout>
         <ListView x:Name="usersListView" VerticalOptions="Fill">
             <ListView.ItemTemplate>

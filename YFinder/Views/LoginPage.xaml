@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage Padding="40" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.LoginPage">
-    <StackLayout>
+    <StackLayout VerticalOptions="Center">
         <Entry Keyboard="Text" Placeholder="Username"/>
-        <Entry IsPassword="true" TextChanged="Handle_TextChanged"/>
+        <Entry Placeholder="Password" IsPassword="true"/>
         <Label x:Name="label" />
         <Button Text="ViewAllUsers" Clicked="Handle_Clicked" />
     </StackLayout>

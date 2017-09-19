@@ -12,14 +12,14 @@ namespace YFinder
 {
 	public partial class UserPage : ContentPage
 	{
-
-        private const string Url = "http://localhost:5000/api/user";
+        private string Url = StaticVariables.YFinderApiRootUrl + "/api/user";
 		private HttpClient _client = new HttpClient();
 		private ObservableCollection<User> _users;
 
         public UserPage()
 		{
 			InitializeComponent();
+
 		}
 
 		protected override async void OnAppearing()
