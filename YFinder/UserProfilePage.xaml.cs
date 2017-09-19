@@ -10,7 +10,7 @@ namespace YFinder
 	{
         public UserProfilePage(User user)
         {
-            //BindingContext = user ?? throw new ArgumentNullException();
+            BindingContext = user ?? throw new ArgumentNullException();
 
 			InitializeComponent();
 		}
