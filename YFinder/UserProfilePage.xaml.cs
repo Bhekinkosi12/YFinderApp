@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace YFinder
 {
-	public partial class UserProfilePage : ContentPage
+	public partial class UserProfilePage : TabbedPage
 	{
         public UserProfilePage(User user)
         {

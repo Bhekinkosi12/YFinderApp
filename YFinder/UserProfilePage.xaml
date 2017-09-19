@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage 
+<TabbedPage 
     xmlns:local="clr-namespace:YFinder"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserProfilePage">
 <!--    <local:FavoritePage Title="Contacts" Icon="clock.png" />-->
@@ -8,10 +8,10 @@
 <!--            <local:UserPage /> -->
 <!--        </x:Arguments>-->
 <!--    </NavigationPage>-->
-<!--    <ContentPage Title="Page1" Icon="clock.png">-->
+    <ContentPage Title="Page1" Icon="clock.png">
         <Label Text="{Binding userName}" HorizontalOptions="Center" VerticalOptions="Center" />
-<!--    </ContentPage>-->
-<!--    <ContentPage Title="Page2" Icon="clock.png">
+    </ContentPage>
+    <ContentPage Title="Page2" Icon="clock.png">
         <Label Text="{Binding email}" HorizontalOptions="Center" VerticalOptions="Center" />
-    </ContentPage>-->
-</ContentPage>
+    </ContentPage>
+</TabbedPage>
