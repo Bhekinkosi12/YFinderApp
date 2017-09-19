@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using YFinder.Views;
 
 namespace YFinder
 {
@@ -18,7 +19,7 @@ namespace YFinder
             else
                 DependencyService.Register<CloudDataStore>();
 
-            MainPage = new LandingPage();
+            MainPage = new MasterPage();
         }
     }
 }
