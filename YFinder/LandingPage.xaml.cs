@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
-using YFinder.Views;
 
-namespace YFinder
+namespace YFinder.Views
 {
     public partial class LandingPage : ContentPage
     {

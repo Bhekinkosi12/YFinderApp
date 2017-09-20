@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--    NavigationPage.HasNavigationBar="false"--><!-- This is to go within content page opening tag-->
 <ContentPage 
-    Title="Welcome" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.LandingPage">
+    Title="Welcome" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.LandingPage.Views">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Welcome to YFinder" HorizontalOptions="Center" />
         <Button Text="Login" Clicked="RouteToLoginPage" />
