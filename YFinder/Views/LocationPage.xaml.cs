@@ -31,12 +31,12 @@ namespace YFinder.Views
 			stack.Children.Add(map);
 			Content = stack;
 
-			var slider = new Slider(1, 18, 1);
-			slider.ValueChanged += (sender, e) => {
-				var zoomLevel = e.NewValue; // between 1 and 18
-				var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
-				map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
-			};
+			//var slider = new Slider(1, 18, 1);
+			//slider.ValueChanged += (sender, e) => {
+			//	var zoomLevel = e.NewValue; // between 1 and 18
+			//	var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
+			//	map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
+			//};
 		}
 	}
 }

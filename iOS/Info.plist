@@ -61,8 +61,8 @@
 		<string>MKDirectionsModeCar</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>YFinder is using your location.</string>
+	<string>This will help you save reviews.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Can YFinder use your location?</string>
+	<string>This speeds up the app by decreasing background loading time.</string>
 </dict>
 </plist>
