@@ -34,4 +34,4 @@ namespace YFinder.Views
             await Navigation.PushModalAsync(new MasterPage());
         }
 	}
-}g
+}

@@ -25,16 +25,22 @@ namespace YFinder
         {
             var content = await _client.GetStringAsync(Url);
             var users = JsonConvert.DeserializeObject<List<User>>(content);
+            var userToLogIn = new User();
+            var entry = userNameInput.Text;
 
             foreach (var user in users)
             {
-                if (user.userName == "deeveloper")
+                if (user.userName == entry)
                 {
-                    var userToLogIn = user;
+                    userToLogIn = user;
                     StaticVariables.setActiveUser(userToLogIn);
                     await Navigation.PushModalAsync(new MasterPage());
                 }
             }
+
+			if (userToLogIn.userName == "") {
+				await DisplayAlert ("Oops!", "Looks like that username isn't recognized", "OK");   
+            } 
         }
 
         async void BackToLanding(object sender, System.EventArgs e)
