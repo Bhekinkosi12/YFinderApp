@@ -118,6 +118,7 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\appIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\tab_about.png" />
@@ -152,6 +153,12 @@
     <BundleResource Include="Resources\wifi%403x.png" />
     <BundleResource Include="Resources\wifi.png" />
     <BundleResource Include="Resources\wifi%402x.png" />
+    <BundleResource Include="Resources\newReview%403x.png" />
+    <BundleResource Include="Resources\newReview.png" />
+    <BundleResource Include="Resources\newReview%402x.png" />
+    <BundleResource Include="Resources\map%403x.png" />
+    <BundleResource Include="Resources\map.png" />
+    <BundleResource Include="Resources\map%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />

@@ -2,15 +2,8 @@
 <ContentPage 
     xmlns:local="clr-namespace:YFinder.Views"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserProfilePage">
-<!--    <ContentPage Title="Page1" Icon="clock.png">-->
-        <Label Text="{Binding userName}" HorizontalOptions="Center" VerticalOptions="Center" />
-<!--    </ContentPage>-->
-<!--    <ContentPage Title="Page2" Icon="clock.png">
-        <Label Text="{Binding email}" HorizontalOptions="Center" VerticalOptions="Center" />
-    </ContentPage>-->
-<!--    <NavigationPage Title="Page3" Icon="clock.png">
-        <x:Arguments>
-            <local:FavoritePage /> 
-        </x:Arguments>
-    </NavigationPage>-->
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+        <Label Text="Welcome, " />
+        <Label Text="{Binding userName}" />
+    </StackLayout>
 </ContentPage>

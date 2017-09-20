@@ -21,10 +21,22 @@ namespace YFinder.Views
 			{
 				new NavBarItem
 				{
+					Title = "Edit Profile",
+					IconSrc = "editUser.png",
+                    TargetType = typeof(EditProfilePage)
+				},
+				new NavBarItem
+				{
 					Title = "My Favorites",
 					IconSrc = "list.png",
 					TargetType = typeof(FavoritePage)
 				},
+                new NavBarItem
+                {
+                    Title = "Leave New Review",
+                    IconSrc = "newReview.png",
+                    TargetType = typeof(MakeReviewPage)
+                },
 				new NavBarItem
 				{
 					Title = "All Users",
@@ -33,13 +45,7 @@ namespace YFinder.Views
 				},
 				new NavBarItem
 				{
-					Title = "Leave New Review",
-					IconSrc = "allUsers.png",
-					TargetType = typeof(MakeReviewPage)
-				},
-				new NavBarItem
-				{
-					Title = "Leave New Review",
+					Title = "Log Out",
 					IconSrc = "logout.png",
 					TargetType = typeof(LandingPage)
 				}
