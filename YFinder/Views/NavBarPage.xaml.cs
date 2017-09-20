@@ -22,20 +22,26 @@ namespace YFinder.Views
 				new NavBarItem
 				{
 					Title = "My Favorites",
-					IconSrc = "",
+					IconSrc = "list.png",
 					TargetType = typeof(FavoritePage)
 				},
 				new NavBarItem
 				{
 					Title = "All Users",
-					IconSrc = "",
+					IconSrc = "allUsers.png",
 					TargetType = typeof(UserPage)
 				},
 				new NavBarItem
 				{
 					Title = "Leave New Review",
-					IconSrc = "",
+					IconSrc = "allUsers.png",
 					TargetType = typeof(MakeReviewPage)
+				},
+				new NavBarItem
+				{
+					Title = "Leave New Review",
+					IconSrc = "logout.png",
+					TargetType = typeof(LandingPage)
 				}
 			};
 
