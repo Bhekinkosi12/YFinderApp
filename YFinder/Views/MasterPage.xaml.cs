@@ -1,5 +1,6 @@
 ﻿using System;
 using YFinder;
+using YFinder.Models;
 using System.Collections.Generic;
 using YFinder.ViewModels;
 using Xamarin.Forms;
@@ -12,6 +13,7 @@ namespace YFinder.Views
 		{
 			InitializeComponent();
 			navBarPage.NavBarList.ItemSelected += OnItemSelected;
+            BindingContext = StaticVariables.activeUser ?? throw new ArgumentNullException();
 		}
 
 		void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

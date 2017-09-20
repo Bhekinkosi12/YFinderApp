@@ -30,6 +30,12 @@ namespace YFinder.Views
 					Title = "All Users",
 					IconSrc = "",
 					TargetType = typeof(UserPage)
+				},
+				new NavBarItem
+				{
+					Title = "Leave New Review",
+					IconSrc = "",
+					TargetType = typeof(MakeReviewPage)
 				}
 			};
 

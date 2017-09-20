@@ -7,6 +7,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using YFinder.Models;
+using YFinder.Views;
 
 namespace YFinder
 {
@@ -30,9 +31,16 @@ namespace YFinder
                 if (user.userName == "deeveloper")
                 {
                     var userToLogIn = user;
-                    await Navigation.PushModalAsync(new UserProfilePage(userToLogIn));
+                    StaticVariables.setActiveUser(userToLogIn);
+                    await Navigation.PushModalAsync(new MasterPage());
                 }
             }
         }
+
+        async void BackToLanding(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LandingPage());
+        }
+
 	}
 }

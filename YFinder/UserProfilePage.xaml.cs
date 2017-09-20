@@ -6,11 +6,11 @@ using Xamarin.Forms;
 
 namespace YFinder
 {
-	public partial class UserProfilePage : TabbedPage
+	public partial class UserProfilePage : ContentPage
 	{
-        public UserProfilePage(User user)
+        public UserProfilePage()
         {
-            BindingContext = user ?? throw new ArgumentNullException();
+            BindingContext = StaticVariables.activeUser ?? throw new ArgumentNullException();
 
 			InitializeComponent();
 		}
