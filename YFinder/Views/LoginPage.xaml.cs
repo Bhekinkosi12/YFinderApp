@@ -7,6 +7,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using YFinder.Models;
+using YFinder.Views;
 
 namespace YFinder
 {
@@ -24,15 +25,28 @@ namespace YFinder
         {
             var content = await _client.GetStringAsync(Url);
             var users = JsonConvert.DeserializeObject<List<User>>(content);
+            var userToLogIn = new User();
+            var entry = userNameInput.Text;
 
             foreach (var user in users)
             {
-                if (user.userName == "deeveloper")
+                if (user.userName == entry)
                 {
-                    var userToLogIn = user;
-                    await Navigation.PushModalAsync(new UserProfilePage(userToLogIn));
+                    userToLogIn = user;
+                    StaticVariables.setActiveUser(userToLogIn);
+                    await Navigation.PushModalAsync(new MasterPage());
                 }
             }
+
+			if (userToLogIn.userName == "") {
+				await DisplayAlert ("Oops!", "Looks like that username isn't recognized", "OK");   
+            } 
         }
+
+        async void BackToLanding(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new LandingPage());
+        }
+
 	}
 }

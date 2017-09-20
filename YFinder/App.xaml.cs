@@ -19,7 +19,7 @@ namespace YFinder
             else
                 DependencyService.Register<CloudDataStore>();
 
-            MainPage = new MasterPage();
+            MainPage = new LandingPage();
         }
     }
 }
