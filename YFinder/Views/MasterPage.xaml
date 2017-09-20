@@ -12,7 +12,7 @@
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <root:UserPage />
+                <views:LandingPage />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
