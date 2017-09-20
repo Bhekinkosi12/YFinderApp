@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--    xmlns:local="clr-namespace:YFinder"-->
-<ContentPage 
+<TabbedPage 
+    xmlns:local="clr-namespace:YFinder.Views"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserProfilePage">
-<!--    <local:FavoritePage Title="Contacts" Icon="clock.png" />-->
-<!--    <NavigationPage Title="Page1" Icon="clock.png">-->
-<!--        <x:Arguments>-->
-<!--            <local:UserPage /> -->
-<!--        </x:Arguments>-->
-<!--    </NavigationPage>-->
-<!--    <ContentPage Title="Page2" Icon="clock.png">-->
-        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center" />
-<!--    </ContentPage>-->
-</ContentPage>
+    <ContentPage Title="Page1" Icon="clock.png">
+        <Label Text="{Binding userName}" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    <ContentPage Title="Page2" Icon="clock.png">
+        <Label Text="{Binding email}" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    <NavigationPage Title="Page3" Icon="clock.png">
+        <x:Arguments>
+            <local:FavoritePage /> 
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

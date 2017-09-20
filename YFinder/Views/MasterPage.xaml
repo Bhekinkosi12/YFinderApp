@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="YFinder.Views.MasterPage"
+    xmlns:root="clr-namespace:YFinder"
+    xmlns:views="clr-namespace:YFinder.Views"
+>
+    <MasterDetailPage.Master>
+        <views:NavBarPage x:Name="navBarPage" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <root:UserPage />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

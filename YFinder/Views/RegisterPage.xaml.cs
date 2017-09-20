@@ -32,8 +32,6 @@ namespace YFinder.Views
             var newUser = JsonConvert.DeserializeObject<User>(responseBody);
 
             await Navigation.PushModalAsync(new UserProfilePage(newUser));
-            //await Navigation.PushModalAsync(new UserPage());
-
         }
 	}
 }
