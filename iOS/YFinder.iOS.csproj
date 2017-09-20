@@ -118,6 +118,7 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\appIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\tab_about.png" />
@@ -131,6 +132,33 @@
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <BundleResource Include="Resources\clock%402x.png" />
     <BundleResource Include="Resources\clock%403x.png" />
+    <BundleResource Include="Resources\allUsers%402x.png" />
+    <BundleResource Include="Resources\allUsers.png" />
+    <BundleResource Include="Resources\allUsers%403x.png" />
+    <BundleResource Include="Resources\list%403x.png" />
+    <BundleResource Include="Resources\list.png" />
+    <BundleResource Include="Resources\list%402x.png" />
+    <BundleResource Include="Resources\logout%403x.png" />
+    <BundleResource Include="Resources\logout.png" />
+    <BundleResource Include="Resources\logout%402x.png" />
+    <BundleResource Include="Resources\login%403x.png" />
+    <BundleResource Include="Resources\login.png" />
+    <BundleResource Include="Resources\login%402x.png" />
+    <BundleResource Include="Resources\register%403x.png" />
+    <BundleResource Include="Resources\register.png" />
+    <BundleResource Include="Resources\register%402x.png" />
+    <BundleResource Include="Resources\editUser%403x.png" />
+    <BundleResource Include="Resources\editUser.png" />
+    <BundleResource Include="Resources\editUser%402x.png" />
+    <BundleResource Include="Resources\wifi%403x.png" />
+    <BundleResource Include="Resources\wifi.png" />
+    <BundleResource Include="Resources\wifi%402x.png" />
+    <BundleResource Include="Resources\newReview%403x.png" />
+    <BundleResource Include="Resources\newReview.png" />
+    <BundleResource Include="Resources\newReview%402x.png" />
+    <BundleResource Include="Resources\map%403x.png" />
+    <BundleResource Include="Resources\map.png" />
+    <BundleResource Include="Resources\map%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
