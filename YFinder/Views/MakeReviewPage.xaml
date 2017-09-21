@@ -15,6 +15,7 @@
                 </TableSection>
             </TableRoot>
         </TableView>
+        <Label Text="Is this Hotspot public?"/>
         <Switch IsToggled="true" x:Name="publicSwitch" />
         <Button Text="Submit" Clicked="MakeNewReview"/>
     </StackLayout>
