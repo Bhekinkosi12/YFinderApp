@@ -43,7 +43,11 @@ namespace YFinder
 			var content = await _client.GetStringAsync(UrlH);
             var hotspots = JsonConvert.DeserializeObject<List<Hotspot>>(content);
 
-            var existingHotspot = hotspots.First(h => h.Title == HotspotName);
+            var existingHotspot = hotspots.FirstOrDefault(h => h.Title == HotspotName);
+            if (existingHotspot == null) {
+                existingHotspot = new Hotspot();
+                existingHotspot.Title = "noneOfTheAbove";
+            }
 
             if (existingHotspot.Title == HotspotName)
             {
