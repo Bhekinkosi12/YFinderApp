@@ -12,5 +12,4 @@
 
 #### Landing
 
-![Splashpage]()
-g
+![Splashpage](https://raw.githubusercontent.com/mitchellblom/YFinderApp/master/YFinder/Screenshots/landing.png)
