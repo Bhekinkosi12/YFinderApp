@@ -16,28 +16,45 @@ namespace YFinder
 {
 	public partial class MakeReviewPage : ContentPage
 	{
-		private string Url = StaticVariables.YFinderApiRootUrl + "/api";
+		private string UrlR = StaticVariables.YFinderApiRootUrl + "/api/rating";
+        private string UrlH = StaticVariables.YFinderApiRootUrl + "/api/hotspot";
 		private HttpClient _client = new HttpClient();
 
-		public MakeReviewPage()
-		{
+        public MakeReviewPage()
+        {
             InitializeComponent();
+        }
 
+        async void MakeNewReview(object sender, System.EventArgs e)
+        {
 			CLLocationManager locationManager = new CLLocationManager();
 			locationManager.RequestWhenInUseAuthorization();
 
 			var latitude = locationManager.Location.Coordinate.Latitude;
 			var longitude = locationManager.Location.Coordinate.Longitude;
 
+            int hotspotIdForRating = 0;
 
+			var content = await _client.GetStringAsync(UrlH);
+            var hotspots = JsonConvert.DeserializeObject<List<Hotspot>>(content);
 
-			// get all hotspots
-			// for each hotspot, is there one matching the name given?
-			// if yes then add that hotspot's id to the rating
-			// if no then create a hotspot with the user's coodinates
-			// get the new hotspot's ID back from object
-			// then send the rating with that hotspot id attached to it.
+			foreach (var hotspot in hotspots)
+			{
+				if (hotspot.Title == hotspotName.Text)
+				{
+                    hotspotIdForRating = hotspot.HotspotId;
+                } else {
+                    var hotspotNew = new NewHotspot();
+                    hotspotNew.Title = hotspotName.Text;
+                    hotspotNew.Latitude = latitude;
+                    hotspotNew.Longitude = longitude;
+					// get the new hotspot's ID back from object
+					// then post below the rating with that hotspot id attached to it.
+                }
+            }
 
-		}
-	}
+            // set rating values here before posting
+
+        }
+    }
 }
