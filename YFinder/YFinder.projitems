@@ -53,6 +53,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\LocationPage.xaml.cs">
       <DependentUpon>LocationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Rating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\NewRating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Hotspot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\NewHotspot.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
