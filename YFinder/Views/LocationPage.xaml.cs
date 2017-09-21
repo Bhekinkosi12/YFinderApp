@@ -66,8 +66,7 @@ namespace YFinder
                 {
                     Type = PinType.Place,
                     Position = position,
-                    Label = hotspot.Title,
-                    //Address = "something about red bike"
+                    Label = hotspot.Title
                 };
                 map.Pins.Add(pin);
             }
