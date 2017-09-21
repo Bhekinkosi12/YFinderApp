@@ -25,6 +25,7 @@ namespace YFinder
 
 			var latitude = locationManager.Location.Coordinate.Latitude;
 			var longitude = locationManager.Location.Coordinate.Longitude;
+
 		}
 	}
 }

@@ -3,7 +3,7 @@
     xmlns:local="clr-namespace:YFinder.Views"
     xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserProfilePage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-        <Label Text="Welcome, " />
-        <Label Text="{Binding userName}" />
+        <Label Text="Welcome," />
+        <Label Text="{Binding fullName}" />
     </StackLayout>
 </ContentPage>

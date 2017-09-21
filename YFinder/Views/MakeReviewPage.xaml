@@ -3,12 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     x:Class="YFinder.MakeReviewPage">
-    <StackLayout VerticalOptions="StartAndExpand" Padding="30">
-        <Label Text="Can you see this?" />
-<!--        <maps:Map WidthRequest="320" HeightRequest="200"
-            x:Name="MyMap"
-            IsShowingUser="true" 
-            MapType="Hybrid"
-        />-->
-    </StackLayout>
+    <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="New Rating">
+                    <EntryCell Label="Hotspot Name" Placeholder="ATT123" Keyboard="Default" x:Name="hotspotName"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
 </ContentPage>
