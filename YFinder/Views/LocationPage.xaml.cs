@@ -27,16 +27,20 @@ namespace YFinder.Views
 				WidthRequest = 960,
 				VerticalOptions = LayoutOptions.FillAndExpand
 			};
+
+            var slider = new Slider(1, 18, 1);
+            slider.ValueChanged += (sender, e) => {
+                var zoomLevel = 13; // between 1 and 18
+                slider.Value = 13;
+                var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
+                map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
+            };
+
 			var stack = new StackLayout { Spacing = 0 };
 			stack.Children.Add(map);
+            stack.Children.Add(slider);
 			Content = stack;
 
-			//var slider = new Slider(1, 18, 1);
-			//slider.ValueChanged += (sender, e) => {
-			//	var zoomLevel = e.NewValue; // between 1 and 18
-			//	var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
-			//	map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
-			//};
 		}
 	}
 }

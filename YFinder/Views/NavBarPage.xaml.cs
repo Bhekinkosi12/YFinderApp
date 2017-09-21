@@ -27,15 +27,15 @@ namespace YFinder.Views
 				},
 				new NavBarItem
 				{
-					Title = "My Reviews",
-					IconSrc = "list.png",
-					TargetType = typeof(FavoritePage)
+					Title = "Nearby Hotspots",
+					IconSrc = "map.png",
+					TargetType = typeof(LocationPage)
 				},
                 new NavBarItem
                 {
-                    Title = "Nearby Hotspots",
-                    IconSrc = "map.png",
-                    TargetType = typeof(LocationPage)
+                    Title = "My Reviews",
+                    IconSrc = "list.png",
+                    TargetType = typeof(FavoritePage)
                 },
                 new NavBarItem
                 {
