@@ -15,6 +15,7 @@
                 </TableSection>
             </TableRoot>
         </TableView>
+        <Switch IsToggled="true" x:Name="publicSwitch" />
         <Button Text="Submit" Clicked="MakeNewReview"/>
     </StackLayout>
 </ContentPage>

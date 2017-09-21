@@ -47,7 +47,10 @@ namespace YFinder
 				if (h.Title == HotspotName)
 				{
                     rating.HotspotId = h.HotspotId;
-                    rating.Public = 1;
+                    rating.Public = 0;
+                    if (publicSwitch.IsToggled == true){
+						rating.Public = 1;
+                    }
                     rating.Score = 4;
                     rating.Speed = (float)6.23;
 					var content3 = JsonConvert.SerializeObject(rating);
@@ -55,28 +58,32 @@ namespace YFinder
 					response1.EnsureSuccessStatusCode();
 					string responseBody1 = await response1.Content.ReadAsStringAsync();
                     await Navigation.PushAsync(new UserProfilePage());
-                    break;
-                } 
+                } else {
+					var hotspotNew = new NewHotspot();
+					hotspotNew.Title = HotspotName;
+					hotspotNew.Latitude = latitude;
+					hotspotNew.Longitude = longitude;
+					var content2 = JsonConvert.SerializeObject(hotspotNew);
+					HttpResponseMessage response = await _client.PostAsync(UrlH, new StringContent(content2, Encoding.UTF8, "application/json"));
+					response.EnsureSuccessStatusCode();
+					string responseBody = await response.Content.ReadAsStringAsync();
+					var DeserializedHotspot = JsonConvert.DeserializeObject<Hotspot>(responseBody);
+					rating.HotspotId = DeserializedHotspot.HotspotId;
+					rating.Public = 0;
+					if (publicSwitch.IsToggled == true)
+					{
+						rating.Public = 1;
+					}
+					rating.Score = 4;
+					rating.Speed = (float)6.23;
+					var content4 = JsonConvert.SerializeObject(rating);
+					HttpResponseMessage response2 = await _client.PostAsync(UrlR, new StringContent(content4, Encoding.UTF8, "application/json"));
+					response2.EnsureSuccessStatusCode();
+					string responseBody2 = await response2.Content.ReadAsStringAsync();
+					await Navigation.PushAsync(new MasterPage());
+                }
             }
 
-			var hotspotNew = new NewHotspot();
-			hotspotNew.Title = HotspotName;
-			hotspotNew.Latitude = latitude;
-			hotspotNew.Longitude = longitude;
-			var content2 = JsonConvert.SerializeObject(hotspotNew);
-			HttpResponseMessage response = await _client.PostAsync(UrlH, new StringContent(content2, Encoding.UTF8, "application/json"));
-			response.EnsureSuccessStatusCode();
-			string responseBody = await response.Content.ReadAsStringAsync();
-			var DeserializedHotspot = JsonConvert.DeserializeObject<Hotspot>(responseBody);
-            rating.HotspotId = DeserializedHotspot.HotspotId;
-			rating.Public = 1;
-			rating.Score = 4;
-			rating.Speed = (float)6.23;
-			var content4 = JsonConvert.SerializeObject(rating);
-			HttpResponseMessage response2 = await _client.PostAsync(UrlR, new StringContent(content4, Encoding.UTF8, "application/json"));
-			response2.EnsureSuccessStatusCode();
-			string responseBody2 = await response2.Content.ReadAsStringAsync();
-			await Navigation.PushAsync(new UserProfilePage());
         }
     }
 }
