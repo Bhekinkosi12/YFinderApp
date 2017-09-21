@@ -61,10 +61,10 @@ namespace YFinder
 				rating.HotspotId = DeserializedHotspot.HotspotId;
             }
 			rating.Public = 0;
-			if (publicSwitch.IsToggled == true)
-			{
-				rating.Public = 1;
-			}
+			//if (publicSwitch.IsToggled == true)
+			//{
+			//	rating.Public = 1;
+			//}
 			rating.Score = 4;
 			rating.Speed = (float)6.23;
 			var content4 = JsonConvert.SerializeObject(rating);
