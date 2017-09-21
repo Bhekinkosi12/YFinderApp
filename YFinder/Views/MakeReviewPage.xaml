@@ -7,7 +7,7 @@
         <TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="New Rating">
-                    <EntryCell Label="Hotspot Name" Placeholder="XmplWifi123" Keyboard="Default" Text="{Binding hotspotName}" x:Name="hotspotName"/>
+                    <EntryCell Label="Hotspot Name" Placeholder="XmplWifi123" Keyboard="Default" x:Name="hotspotName"/>
                     <EntryCell Label="Comment" Placeholder="Quiet setting to study" Keyboard="Default" Text="{Binding Comment}"/>
     <!--                Public bool toggle -->
     <!--                Score slider-->
