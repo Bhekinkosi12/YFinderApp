@@ -27,7 +27,7 @@ namespace YFinder.Views
 				},
 				new NavBarItem
 				{
-					Title = "My Favorites",
+					Title = "My Reviews",
 					IconSrc = "list.png",
 					TargetType = typeof(FavoritePage)
 				},

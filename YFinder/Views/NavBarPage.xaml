@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage  Padding="0, 20, 0, 0" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.Views.NavBarPage">
+<ContentPage  Title="YFinder" 
+    Padding="0, 20, 0, 0" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="YFinder.Views.NavBarPage"
+    Icon="hamburger-sm.png">
     <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="Gray">
         <ListView x:Name="navbarlist" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
-            <ListView.ItemTemplate Padding="0, 40, 0, 0">
+            <ListView.ItemTemplate Padding="0, 60, 0, 0">
                 <DataTemplate>
                     <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSrc}" />
                 </DataTemplate>
