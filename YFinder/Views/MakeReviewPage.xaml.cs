@@ -1,36 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using CoreLocation;
 using MapKit;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json;
+using YFinder.Models;
+using YFinder.Views;
 
-namespace YFinder.Views
+namespace YFinder
 {
-    public partial class MakeReviewPage : ContentPage
-    {
-        public MakeReviewPage()
-        {
-		    var map = new Map(
-		    MapSpan.FromCenterAndRadius(
-				   new Position(37, -122), Distance.FromMiles(0.3)))
-			{
-				IsShowingUser = true,
-				HeightRequest = 100,
-				WidthRequest = 960,
-				VerticalOptions = LayoutOptions.FillAndExpand
-			};
-			var stack = new StackLayout { Spacing = 0 };
-			stack.Children.Add(map);
-			Content = stack;
+	public partial class MakeReviewPage : ContentPage
+	{
+		public MakeReviewPage()
+		{
+            InitializeComponent();
 
-			var slider = new Slider(1, 18, 1);
-			slider.ValueChanged += (sender, e) => {
-				var zoomLevel = e.NewValue; // between 1 and 18
-				var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
-				map.MoveToRegion(new MapSpan(map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
-			};
-        }
-    }
+			CLLocationManager locationManager = new CLLocationManager();
+			locationManager.RequestWhenInUseAuthorization();
+
+			var latitude = locationManager.Location.Coordinate.Latitude;
+			var longitude = locationManager.Location.Coordinate.Longitude;
+
+		}
+	}
 }

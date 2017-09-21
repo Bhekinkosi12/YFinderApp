@@ -33,6 +33,12 @@ namespace YFinder.Views
 				},
                 new NavBarItem
                 {
+                    Title = "Where Am I?",
+                    IconSrc = "map.png",
+                    TargetType = typeof(LocationPage)
+                },
+                new NavBarItem
+                {
                     Title = "Leave New Review",
                     IconSrc = "newReview.png",
                     TargetType = typeof(MakeReviewPage)
