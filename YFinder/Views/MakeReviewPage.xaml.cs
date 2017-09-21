@@ -65,7 +65,7 @@ namespace YFinder
 			{
 				rating.Public = 1;
 			}
-			rating.Score = 4;
+            rating.Score = (int)Math.Ceiling(slider.Value);
 			rating.Speed = (float)6.23;
 			var content4 = JsonConvert.SerializeObject(rating);
 			HttpResponseMessage response2 = await _client.PostAsync(UrlR, new StringContent(content4, Encoding.UTF8, "application/json"));
