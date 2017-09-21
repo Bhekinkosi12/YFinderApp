@@ -33,7 +33,7 @@ namespace YFinder.Views
 				},
                 new NavBarItem
                 {
-                    Title = "Where Am I?",
+                    Title = "Nearby Hotspots",
                     IconSrc = "map.png",
                     TargetType = typeof(LocationPage)
                 },
@@ -45,7 +45,7 @@ namespace YFinder.Views
                 },
 				new NavBarItem
 				{
-					Title = "All Users",
+					Title = "View Fellow YFinders",
 					IconSrc = "allUsers.png",
 					TargetType = typeof(UserPage)
 				},
