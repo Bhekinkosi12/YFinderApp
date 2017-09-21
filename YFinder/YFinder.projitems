@@ -96,5 +96,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Screenshots\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\landing.png" />
   </ItemGroup>
 </Project>
