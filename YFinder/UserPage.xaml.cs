@@ -19,7 +19,6 @@ namespace YFinder
         public UserPage()
 		{
 			InitializeComponent();
-
 		}
 
 		protected override async void OnAppearing()
