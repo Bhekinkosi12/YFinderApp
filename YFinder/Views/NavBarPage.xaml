@@ -7,7 +7,7 @@
     Icon="hamburger-sm.png">
     <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="Gray">
         <ListView x:Name="navbarlist" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
-            <ListView.ItemTemplate Padding="0, 60, 0, 0">
+            <ListView.ItemTemplate Padding="0, 90, 0, 0">
                 <DataTemplate>
                     <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSrc}" />
                 </DataTemplate>
