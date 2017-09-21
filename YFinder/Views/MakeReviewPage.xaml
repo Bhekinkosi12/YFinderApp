@@ -10,8 +10,9 @@
                     <EntryCell Label="Hotspot Name" Placeholder="XmplWifi123" Keyboard="Default" x:Name="hotspotName"/>
                     <EntryCell Label="Comment" Placeholder="Quiet setting to study" Keyboard="Default" Text="{Binding Comment}"/>
                     <SwitchCell Text="Is this Hotspot public?" On="true" x:Name="publicSwitch"/>
+                    <TextCell Text="Overall rating: " />
                     <ViewCell>
-                        <StackLayout Padding="30,0,0,0">
+                        <StackLayout Padding="40,10,40,100">
                             <Slider x:Name="slider" Maximum="5" Minimum="1" Value="1" />
                             <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}" x:Name="sliderValue" />
                         </StackLayout>
