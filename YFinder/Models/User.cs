@@ -7,7 +7,7 @@ namespace YFinder.Models
 {
   public class User
   {
-    public int? userId { get; set; }
+    public int userId { get; set; }
     public object bio { get; set; }
     public string email { get; set; }
     public string fullName { get; set; }
