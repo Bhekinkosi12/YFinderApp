@@ -9,14 +9,12 @@
                 <TableSection Title="New Rating">
                     <EntryCell Label="Hotspot Name" Placeholder="XmplWifi123" Keyboard="Default" x:Name="hotspotName"/>
                     <EntryCell Label="Comment" Placeholder="Quiet setting to study" Keyboard="Default" Text="{Binding Comment}"/>
-    <!--                Public bool toggle -->
+                    <SwitchCell Text="Is this Hotspot public?" On="true" x:Name="publicSwitch"/>
     <!--                Score slider-->
     <!--                Speed call-->
                 </TableSection>
             </TableRoot>
         </TableView>
-        <Label Text="Is this Hotspot public?"/>
-        <Switch IsToggled="true" x:Name="publicSwitch" />
         <Button Text="Submit" Clicked="MakeNewReview"/>
     </StackLayout>
 </ContentPage>
