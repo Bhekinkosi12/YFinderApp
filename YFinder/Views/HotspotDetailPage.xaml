@@ -3,8 +3,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="YFinder.HotspotDetailPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="This is the Hotspot Detail Page" />
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+        <Label HorizontalOptions="Center" Text="{Binding Title}" TextColor="Green" FontFamily="MarkerFelt-Thin" FontAttributes="Bold" FontSize="40" />
+        <Label HorizontalOptions="Center" Text="Latitude:" FontSize="30" FontAttributes="Bold" />
+        <Label HorizontalOptions="Center" Text="{Binding Latitude}" FontSize="20" />
+        <Label HorizontalOptions="Center" Text="Longitude:" FontSize="30" FontAttributes="Bold" />
+        <Label HorizontalOptions="Center" Text="{Binding Longitude}" FontSize="20" />
+        <Button Text="Take Me There" Clicked="TakeMeThere"/>
         <Button Text="Back To Map" Clicked="ClearDetail"/>
     </StackLayout>
 </ContentPage>

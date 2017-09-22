@@ -21,19 +21,13 @@ namespace YFinder.Views
 			{
 				new NavBarItem
 				{
-					Title = "Edit Profile",
-					IconSrc = "editUser.png",
-                    TargetType = typeof(EditProfilePage)
-				},
-				new NavBarItem
-				{
 					Title = "Nearby Hotspots",
 					IconSrc = "map.png",
 					TargetType = typeof(LocationPage)
 				},
                 new NavBarItem
                 {
-                    Title = "My Reviews",
+                    Title = "See Reviews",
                     IconSrc = "list.png",
                     TargetType = typeof(FavoritePage)
                 },
@@ -43,13 +37,19 @@ namespace YFinder.Views
                     IconSrc = "newReview.png",
                     TargetType = typeof(MakeReviewPage)
                 },
+                new NavBarItem
+                {
+                    Title = "View Fellow YFinders",
+                    IconSrc = "allUsers.png",
+                    TargetType = typeof(UserPage)
+                },
 				new NavBarItem
 				{
-					Title = "View Fellow YFinders",
-					IconSrc = "allUsers.png",
-					TargetType = typeof(UserPage)
+					Title = "My Profile",
+					IconSrc = "editUser.png",
+					TargetType = typeof(EditProfilePage)
 				},
-				new NavBarItem
+                new NavBarItem
 				{
 					Title = "Log Out",
 					IconSrc = "logout.png",

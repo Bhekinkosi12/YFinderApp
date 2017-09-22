@@ -5,7 +5,7 @@
     xmlns:image="clr-namespace:YFinder.MarkupExtensions"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="YFinder.UserProfilePage">
-    <Image Source="{image:EmbeddedImage YFinder.iOS.Resources.letterY.png}" x:Name="something" Aspect="AspectFill" />
+    <Image Source="{image:EmbeddedImage YFinder.iOS.Resources.letterY.png}" Aspect="AspectFill" />
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
         <Label Text="Welcome," FontSize="25"/>
         <Label Text="{Binding fullName}" FontSize="25" />
