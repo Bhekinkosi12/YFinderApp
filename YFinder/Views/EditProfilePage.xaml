@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.Views.EditProfilePage">
-	<Label Text="This is where a user will be able to edit their profile."/>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+        <Label HorizontalOptions="Center" Text="{Binding fullName}" TextColor="Green" FontFamily="MarkerFelt-Thin" FontAttributes="Bold" FontSize="40" />
+        <Label HorizontalOptions="Center" Text="{Binding userName}" FontSize="20" />
+        <Label HorizontalOptions="Center" Text="{Binding email}" FontSize="20" />
+        <Label HorizontalOptions="Center" Text="{Binding zip}" FontSize="20" />
+    </StackLayout>
 </ContentPage>

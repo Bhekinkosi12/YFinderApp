@@ -9,6 +9,8 @@ namespace YFinder.Views
     {
         public EditProfilePage()
         {
+            BindingContext = StaticVariables.activeUser ?? throw new ArgumentNullException();
+
             InitializeComponent();
         }
     }

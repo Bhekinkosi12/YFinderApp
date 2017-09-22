@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
     xmlns:local="clr-namespace:YFinder.Views"
-    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YFinder.UserProfilePage">
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:image="clr-namespace:YFinder.MarkupExtensions"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="YFinder.UserProfilePage">
+    <Image Source="{image:EmbeddedImage YFinder.iOS.Resources.letterY.png}" Aspect="AspectFill" />
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-        <Label Text="Welcome," FontSize="25"/>
-        <Label Text="{Binding fullName}" FontSize="25" />
+        <Label Text="Welcome..." FontSize="25"/>
+        <Label Text="{Binding fullName}" TextColor="Green" FontFamily="MarkerFelt-Thin" FontAttributes="Bold" FontSize="40" />
     </StackLayout>
 </ContentPage>
