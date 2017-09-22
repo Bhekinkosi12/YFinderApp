@@ -9,16 +9,16 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YFinder.Models;
 
-using System.Linq;
-using System.Collections.ObjectModel;
-using System.Text;
-using YFinder.Views;
-
 namespace YFinder
 {
 	public partial class LocationPage : ContentPage
 	{
-		private string UrlH = StaticVariables.YFinderApiRootUrl + "/api/hotspot";
+        void HandleEventHandler(object sender, EventArgs e)
+        {
+
+        }
+
+        private string UrlH = StaticVariables.YFinderApiRootUrl + "/api/hotspot";
 		private HttpClient _client = new HttpClient();
 
 		public LocationPage()
@@ -66,8 +66,13 @@ namespace YFinder
                 {
                     Type = PinType.Place,
                     Position = position,
-                    Label = hotspot.Title
+                    Label = hotspot.Title,
                 };
+				pin.Clicked += (object sender, EventArgs e) =>
+				{
+					Navigation.PushModalAsync(new ReviewDetailPage(hotspot));
+				};
+
                 map.Pins.Add(pin);
             }
 			

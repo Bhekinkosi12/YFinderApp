@@ -12,6 +12,8 @@ using System.Text;
 using Newtonsoft.Json;
 using YFinder.Models;
 using YFinder.Views;
+using System.Net;
+using System.Diagnostics;
 
 namespace YFinder
 {
@@ -70,7 +72,17 @@ namespace YFinder
 				rating.Public = 1;
 			}
             rating.Score = (int)Math.Ceiling(slider.Value);
-			rating.Speed = (float)6.23;
+			
+            // calling google to get relative wifi speed and rounding it to seconds
+            HttpWebRequest requestTime = (HttpWebRequest)WebRequest.Create("https://www.google.com");
+			System.Diagnostics.Stopwatch timer = new Stopwatch();
+			timer.Start();
+			HttpWebResponse responseTime = (HttpWebResponse)requestTime.GetResponse();
+			timer.Stop();
+			TimeSpan timeTaken = timer.Elapsed;
+			
+            rating.Speed = timeTaken.Seconds;
+
 			var content4 = JsonConvert.SerializeObject(rating);
 			HttpResponseMessage response2 = await _client.PostAsync(UrlR, new StringContent(content4, Encoding.UTF8, "application/json"));
 			response2.EnsureSuccessStatusCode();
