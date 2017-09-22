@@ -12,6 +12,8 @@ namespace YFinder
         {
             BindingContext = StaticVariables.activeUser ?? throw new ArgumentNullException();
 
+            var imageSource = ImageSource.FromResource("YFinder.iOS.Resources.letterY.png");
+
 			InitializeComponent();
 		}
 	}

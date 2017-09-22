@@ -60,6 +60,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\HotspotDetailPage.xaml.cs">
       <DependentUpon>HotspotDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MarkupExtensions\EmbeddedImage.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -103,6 +104,7 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Screenshots\" />
+    <Folder Include="$(MSBuildThisFileDirectory)MarkupExtensions\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Screenshots\landing.png" />
