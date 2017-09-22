@@ -7,7 +7,7 @@
     x:Class="YFinder.UserProfilePage">
     <Image Source="{image:EmbeddedImage YFinder.iOS.Resources.letterY.png}" Aspect="AspectFill" />
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
-        <Label Text="Welcome," FontSize="25"/>
-        <Label Text="{Binding fullName}" FontSize="25" />
+        <Label Text="Welcome..." FontSize="25"/>
+        <Label Text="{Binding fullName}" TextColor="Green" FontFamily="MarkerFelt-Thin" FontAttributes="Bold" FontSize="40" />
     </StackLayout>
 </ContentPage>
