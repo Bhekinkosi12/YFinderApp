@@ -8,6 +8,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YFinder.Models;
+using YFinder.Views;
 
 namespace YFinder
 {
@@ -70,7 +71,7 @@ namespace YFinder
                 };
 				pin.Clicked += (object sender, EventArgs e) =>
 				{
-					Navigation.PushModalAsync(new ReviewDetailPage(hotspot));
+					Navigation.PushModalAsync(new HotspotDetailPage(hotspot));
 				};
 
                 map.Pins.Add(pin);

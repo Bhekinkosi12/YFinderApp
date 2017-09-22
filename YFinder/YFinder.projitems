@@ -57,6 +57,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\NewRating.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Hotspot.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\NewHotspot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\HotspotDetailPage.xaml.cs">
+      <DependentUpon>HotspotDetailPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -91,6 +94,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LocationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HotspotDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
