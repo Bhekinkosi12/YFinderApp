@@ -11,5 +11,12 @@
         <Label HorizontalOptions="Center" Text="{Binding Longitude}" FontSize="20" />
         <Button Text="Take Me There" Clicked="TakeMeThere"/>
         <Button Text="Back To Map" Clicked="ClearDetail"/>
+        <ListView x:Name="ratingsListView" VerticalOptions="Fill">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Comment}" Detail="{Binding Score}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
