@@ -61,6 +61,7 @@
       <DependentUpon>HotspotDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StaticVariablesExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -107,6 +108,16 @@
     <Folder Include="$(MSBuildThisFileDirectory)MarkupExtensions\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Screenshots\landing.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\01-landing.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\02-login.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\03-welcome.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\04-menu.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\05-map.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\06-hotspot.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\07-directions.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\08-reviews.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\09-new.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\10-users.png" />
+    <None Include="$(MSBuildThisFileDirectory)Screenshots\11-profile.png" />
   </ItemGroup>
 </Project>
