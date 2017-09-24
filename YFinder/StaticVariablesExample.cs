@@ -5,7 +5,7 @@
 //{
 //	public class StaticVariables
 //	{
-//		public static string YFinderApiRootUrl = ""; // << INSERT API LINK HERE AND UNCOMMENT THIS FILE
+//		public static string YFinderApiRootUrl = "http://localhost:5000/"; // << REPLACE API LINK HERE AND UNCOMMENT THIS FILE
 
 //		public static User activeUser { get; set; }
 
